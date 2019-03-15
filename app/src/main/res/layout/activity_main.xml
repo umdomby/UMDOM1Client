@@ -1,155 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity"
-    android:id="@+id/osnova"
-    android:background="#e7e8ea"
-    android:contextClickable="true">
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textInfo"
-        android:textSize="22dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="480dp"
-        android:visibility="visible" />
 
-    <ListView
-        android:id="@+id/pairedlist"
-        android:layout_width="250dp"
-        android:layout_height="190dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="390dp"
-        android:visibility="visible" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        />
 
-    <FrameLayout
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#e7e7e5"
-        android:id="@+id/ButPanel"
-        android:visibility="gone">
-    </FrameLayout>
+        android:layout_height="77dp"
+        android:background="@color/colorGreenApp"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextColor="@android:color/black"
+        app:tabMode="scrollable">
 
-    <ImageButton
-        android:id="@+id/ImageButton1"
-        android:layout_width="88dp"
-        android:layout_height="88dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="5dp"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/one" />
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabChats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="КОМНАТЫ" />
 
-    <ImageButton
-        android:id="@+id/ImageButton2"
-        android:layout_width="88dp"
-        android:layout_height="88dp"
-        android:layout_alignTop="@+id/ImageButton1"
-        android:layout_marginStart="95dp"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/two" />
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="СПАЛЬНЯ" />
 
-    <ImageButton
-        android:id="@+id/ImageButton3"
-        android:layout_width="88dp"
-        android:layout_height="88dp"
-        android:layout_alignTop="@+id/ImageButton1"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="187dp"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/three" />
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabCalls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ХОЛЛ" />
 
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabCanteen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="СТОЛОВАЯ" />
 
-    <ImageButton
-        android:id="@+id/ImageButton4"
-        android:layout_width="88dp"
-        android:layout_height="88dp"
-        android:layout_alignTop="@+id/ImageButton1"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="0dp"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/four" />
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabBase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ЦОКОЛЬ" />
 
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabOutside"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="УЛИЦА" />
 
-    <ImageButton
-        android:id="@+id/ImageButton5"
-        android:layout_width="88dp"
-        android:layout_height="88dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="100dp"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/five" />
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="НАСТРОЙКИ" />
+
+    </android.support.design.widget.TabLayout>
 
 
-    <ImageButton
-        android:id="@+id/ImageButton6"
-        android:layout_width="88dp"
-        android:layout_height="88dp"
-        android:layout_alignTop="@+id/ImageButton5"
-        android:layout_marginStart="95dp"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/six" />
-
-
-    <ImageButton
-        android:id="@+id/ImageButton7"
-        android:layout_width="88dp"
-        android:layout_height="88dp"
-        android:layout_alignTop="@+id/ImageButton5"
-        android:layout_marginStart="187dp"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/seven" />
-
-
-    <ImageButton
-        android:id="@+id/ImageButton8"
-        android:layout_width="88dp"
-        android:layout_height="88dp"
-        android:layout_alignTop="@+id/ImageButton5"
-        android:layout_marginStart="280dp"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/eight" />
-
-    <ImageButton
-        android:id="@+id/ImageButtonOnOff"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_alignStart="@+id/ImageButton4"
-        android:layout_marginTop="300dp"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/on" />
-
-
-    <ImageButton
-        android:id="@+id/ImageButtonObnov"
-        android:layout_width="70dp"
-        android:layout_height="72dp"
-        android:layout_alignStart="@+id/ImageButton4"
-        android:layout_marginTop="400dp"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/obnov" />
-
-    <TextView
-        android:id="@+id/textTemp"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/ImageButton1"
-        android:layout_marginTop="209dp"
-        android:layout_marginLeft="35dp"
-        android:text="temp" />
-
-
-    <TextView
-        android:id="@+id/response"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="370dp"/>
-
-
-</RelativeLayout>
+</LinearLayout>
